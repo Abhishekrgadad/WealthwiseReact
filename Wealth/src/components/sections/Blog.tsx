@@ -8,42 +8,42 @@ const Blog = () => {
       title: 'SIP vs FD: Where Should You Park Your ₹10,000?',
       summary: 'Comprehensive comparison of Systematic Investment Plans vs Fixed Deposits for long-term wealth creation in India.',
       author: 'Rajesh Kumar',
-      date: 'Dec 15, 2024',
+      date: 'Dec 15, 2025',
       readTime: '5 min read'
     },
     {
       title: 'Why Most People Buy the Wrong Insurance',
       summary: 'Common mistakes in insurance planning and how to choose the right coverage for your family\'s needs.',
       author: 'Priya Sharma',
-      date: 'Dec 12, 2024',
+      date: 'Dec 12, 2025',
       readTime: '7 min read'
     },
     {
       title: 'How We Select PMS Funds for Clients',
       summary: 'Our detailed process for evaluating and selecting Portfolio Management Services for high-net-worth individuals.',
       author: 'Amit Patel',
-      date: 'Dec 10, 2024',
+      date: 'Dec 10, 2025',
       readTime: '6 min read'
     },
     {
       title: 'Demystifying Mutual Fund Jargon',
       summary: 'Simple explanations of complex mutual fund terms every Indian investor should understand.',
       author: 'Neha Singh',
-      date: 'Dec 8, 2024',
+      date: 'Dec 8, 2025',
       readTime: '4 min read'
     },
     {
-      title: 'Tax Planning Strategies for 2024-25',
+      title: 'Tax Planning Strategies for 2025-25',
       summary: 'Latest tax-saving investment options and strategies to maximize your after-tax returns.',
       author: 'Rajesh Kumar',
-      date: 'Dec 5, 2024',
+      date: 'Dec 5, 2025',
       readTime: '8 min read'
     },
     {
       title: 'Building Emergency Fund: A Step-by-Step Guide',
       summary: 'How to build and maintain an emergency fund that protects your wealth during uncertain times.',
       author: 'Priya Sharma',
-      date: 'Dec 3, 2024',
+      date: 'Dec 3, 2025',
       readTime: '5 min read'
     }
   ];
