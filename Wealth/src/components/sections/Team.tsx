@@ -30,14 +30,14 @@ const Team = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '₹50Cr+', label: 'Assets Under Advisory' },
-    { number: '10+', label: 'Years of Experience' },
-    { number: '95%', label: 'Client Retention' }
+    { number: '300Cr+', label: 'Affluent' },
+    { number: '1000Cr+', label: 'HNI Clients' },
+    { number: '300+', label: 'Family Offices & UHNI' },
+    { number: '12yrs', label: 'Market Experience' }
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-900 font-poppins">
+    <section id="team" className="py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -49,7 +49,7 @@ const Team = () => {
             People First. Performance Follows.
           </h2>
         </motion.div>
-
+        //Add section if required here on top.
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
           {/* Founder's Note */}
           <motion.div
