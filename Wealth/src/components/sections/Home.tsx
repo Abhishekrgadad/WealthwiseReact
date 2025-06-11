@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Image from '../../assets/Image.png'; // Adjust the path as necessary
+
 
 const Home = () => {
   const scrollToNext = () => {
@@ -62,7 +64,7 @@ const Home = () => {
             >
               <div className="relative w-96 h-96 flex items-center justify-center">
               <img
-                src="src/assets/Image.png"
+                src={Image}
                 alt="Wealth Growth"
                 className="absolute w-90 h-90 rounded-full object-cover"
               />
