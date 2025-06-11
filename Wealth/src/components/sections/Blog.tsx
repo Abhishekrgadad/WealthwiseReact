@@ -49,7 +49,7 @@ const Blog = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 font-poppins">
+    <section className="py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -72,7 +72,7 @@ const Blog = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-black p-8 cursor-pointer group transition-all duration-300"
+              className="bg-black border border-gray-700 rounded-lg p-8 cursor-pointer group transition-all duration-100"
             >
               <div className="mb-6">
                 <div className="flex items-center text-sm text-gray-400 space-x-4 mb-4">
@@ -118,7 +118,7 @@ const Blog = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-200 transition-colors duration-300"
+            className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-200 transition-colors duration-100 rounded-lg"
           >
             View All Articles
           </motion.button>

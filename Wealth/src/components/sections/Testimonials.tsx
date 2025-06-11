@@ -70,7 +70,7 @@ const Testimonials = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.8 }}
-                className={`absolute inset-0 ${testimonials[currentIndex].background} p-12 flex items-center justify-center border border-gray-600`}
+                className={`absolute inset-0 ${testimonials[currentIndex].background} p-12 flex items-center justify-center border rounded-lg border-gray-500`}
               >
                 <div className="text-center">
                   <Quote size={48} className={`mx-auto mb-8 ${testimonials[currentIndex].textColor}`} />
