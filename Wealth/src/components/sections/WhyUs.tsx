@@ -27,7 +27,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="py-20 bg-gray-900 font-poppins">
+    <section id="why-us" className="py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -51,15 +51,15 @@ const WhyUs = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-black p-8 text-center group cursor-pointer rounded-lg transition-all duration-300"
+              className="bg-white p-8 text-center group cursor-pointer rounded-lg transition-all duration-200"
             >
               <div className="mb-6">
-                <value.icon size={48} className="mx-auto text-white" />
+                <value.icon size={48} className="mx-auto text-black" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-black mb-4">
                 {value.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 {value.description}
               </p>
             </motion.div>
