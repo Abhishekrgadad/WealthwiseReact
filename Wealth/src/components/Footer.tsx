@@ -141,7 +141,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
         >
-          <p>&copy; 2025 WealthWise. All rights reserved. | Designed for ambitious Indians.</p>
+          <p>&copy; 2025 WealthWise. All rights reserved. | Designed for WealthWise.</p>
         </motion.div>
       </div>
     </footer>
