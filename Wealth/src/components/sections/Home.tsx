@@ -62,7 +62,7 @@ const Home = () => {
             >
               <div className="relative w-96 h-96 flex items-center justify-center">
               <img
-                src="/public/Image.png"
+                src="src/assets/Image.png"
                 alt="Wealth Growth"
                 className="absolute w-90 h-90 rounded-full object-cover"
               />
