@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +27,6 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -50,8 +47,8 @@ const Header = () => {
             WealthWise
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-6 xl:space-x-12">
+          {/* Desktop Navigation - Only visible on lg and up */}
+          <nav className="hidden lg:flex space-x-12 xl:space-x-16">
             {navItems.map((item) => (
               <motion.button
                 key={item.label}
@@ -65,7 +62,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Schedule Call Button - Desktop */}
+          {/* Schedule Call Button - Desktop only */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -74,43 +71,7 @@ const Header = () => {
           >
             Schedule a Free Call
           </motion.button>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <motion.nav
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-black border-t border-gray-800 py-4"
-          >
-            {navItems.map((item) => (
-              <motion.button
-                key={item.label}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-3 text-white hover:bg-gray-900 transition-colors duration-200"
-              >
-                {item.label}
-              </motion.button>
-            ))}
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection('#contact')}
-              className="block w-full text-left px-4 py-3 mt-2px bg-white text-black font-semibold hover:bg-gray-200 transition-colors duration-200 mx-4 rounded-full text-center"
-            >
-              Schedule a Free Call
-            </motion.button>
-          </motion.nav>
-        )}
       </div>
     </motion.header>
   );

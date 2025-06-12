@@ -30,8 +30,8 @@ const Team = () => {
   ];
 
   const stats = [
-    { number: '300Cr+', label: 'Affluent' },
-    { number: '1000Cr+', label: 'HNI Clients' },
+    { number: '300Cr+', label: 'AUM' },
+    { number: '1000+', label: 'HNI Clients' },
     { number: '300+', label: 'Family Offices & UHNI' },
     { number: '12yrs', label: 'Market Experience' }
   ];
