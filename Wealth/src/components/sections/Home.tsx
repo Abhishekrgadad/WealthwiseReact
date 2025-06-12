@@ -17,7 +17,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="text-left">
+          <div className="text-left lg:order-1 order-1 w-full">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -53,24 +53,36 @@ const Home = () => {
             >
               Schedule a Free Wealth Call
             </motion.button>
+
+            {/* Mobile Image below content */}
+            <div className="block lg:hidden mt-8 w-full flex justify-center">
+              <div className="relative w-64 h-64 flex items-center justify-center">
+                <img
+                  src={Image}
+                  alt="Wealth Growth"
+                  className="w-60 h-60 rounded-full object-cover"
+                />
+                <div className="absolute w-64 h-64 rounded-full border-2 border-white"></div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:flex justify-center items-center"
-            >
-              <div className="relative w-96 h-96 flex items-center justify-center">
+          {/* Right Image (desktop only) */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="hidden lg:flex justify-center items-center lg:order-2"
+          >
+            <div className="relative w-96 h-96 flex items-center justify-center">
               <img
                 src={Image}
                 alt="Wealth Growth"
                 className="absolute w-90 h-90 rounded-full object-cover"
               />
               <div className="absolute w-[410px] h-[410px] rounded-full border-2 border-white"></div>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
  

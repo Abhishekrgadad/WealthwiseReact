@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-black font-poppins">
+    <section id="services" className="py-5 md:py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -45,9 +45,9 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             What We Offer
-          </h2>
+            </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive financial services designed to grow and protect your wealth at every stage of life.
           </p>
@@ -61,14 +61,14 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg p-8 transition-all duration-100"
+              className="bg-white p-4 rounded-lg sm:p-6 lg:p-8 transition-all duration-100 w-full max-w-xs mx-auto"
             >
-              <div className="flex items-center mb-6">
-                <service.icon size={32} className="text-black mr-4" />
-                <h3 className="text-2xl font-bold text-black">{service.title}</h3>
+              <div className="flex items-center mb-4 sm:mb-6">
+              <service.icon size={24} className="text-black mr-3 sm:mr-4 sm:size-8" />
+              <h3 className="text-lg sm:text-2xl font-bold text-black">{service.title}</h3>
               </div>
-              <p className="text-black leading-relaxed text-lg">
-                {service.description}
+              <p className="text-black leading-relaxed text-base sm:text-lg">
+              {service.description}
               </p>
             </motion.div>
           ))}

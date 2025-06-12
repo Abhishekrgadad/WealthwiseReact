@@ -37,7 +37,7 @@ const ClientJourney = () => {
   ];
 
   return (
-    <section id="journey" className="py-20 bg-black font-poppins">
+    <section id="journey" className="py-5 md:py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,14 +57,14 @@ const ClientJourney = () => {
           {/* Connecting Line - Hidden on mobile */}
           <div className="hidden md:block absolute left-8 top-16 bottom-16 w-0.5 bg-white"></div>
 
-          <div className="space-y-12">
+          <div className="">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="relative flex items-start space-x-8"
+                className="relative flex items-start space-x-2 md:space-x-8"
               >
                 {/* Step Number & Icon */}
                 <div className="flex-shrink-0 relative">

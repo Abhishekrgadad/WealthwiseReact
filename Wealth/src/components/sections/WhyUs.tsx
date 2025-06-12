@@ -27,7 +27,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="py-20 bg-black font-poppins">
+    <section id="why-us" className="py-5 md:py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ const WhyUs = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -51,16 +51,16 @@ const WhyUs = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white p-8 text-center group cursor-pointer rounded-lg transition-all duration-200"
+              className="bg-white p-6 sm:p-8 text-center group cursor-pointer rounded-lg transition-all duration-200 w-full max-w-xs mx-auto"
             >
-              <div className="mb-6">
-                <value.icon size={48} className="mx-auto text-black" />
+              <div className="mb-4 sm:mb-6">
+              <value.icon size={36} className="mx-auto text-black sm:size-[48px]" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-4">
-                {value.title}
+              <h3 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">
+              {value.title}
               </h3>
-              <p className="text-black leading-relaxed">
-                {value.description}
+              <p className="text-black leading-relaxed text-sm sm:text-base">
+              {value.description}
               </p>
             </motion.div>
           ))}

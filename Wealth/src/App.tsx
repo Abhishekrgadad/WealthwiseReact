@@ -12,9 +12,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-black font-poppins">
+    <div className="bg-black font-poppins overflow-x-hidden">
       <Header />
-      <main>
+      <main className='w-full'>
         <Home />
         <WhyUs />
         <Services />

@@ -37,7 +37,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-black font-poppins">
+    <section id="team" className="py-5 md:py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -45,12 +45,12 @@ const Team = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 mt-5">
             People First. Performance Follows.
           </h2>
         </motion.div>
         //Add section if required here on top.
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-16">
           {/* Founder's Note */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -59,7 +59,7 @@ const Team = () => {
             className="space-y-6"
           >
             <h3 className="text-3xl font-bold text-white">A Note from Our Founder</h3>
-            <div className="text-lg text-gray-300 leading-relaxed space-y-4 font-serif italic">
+            <div className="text-lg text-gray-300 leading-relaxed space-y-2 font-serif italic">
               <p>
                 "After working with hundreds of Indian families, I realized that most people don't need complex financial products—they need clarity, trust, and a long-term partner who truly understands their aspirations."
               </p>
@@ -77,7 +77,7 @@ const Team = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-4"
           >
             {teamMembers.map((member, index) => (
               <motion.div
