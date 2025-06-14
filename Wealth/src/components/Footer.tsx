@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 border-t border-gray-800 font-poppins">
+    <footer className="bg-black text-white py-10  border-t border-gray-800 font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hide all except copyright on mobile */}
         <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -140,7 +140,7 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+          className="pt-8 text-center text-gray-400 border-t border-black md:mt-12 md:border-t"
         >
           <p>&copy; 2025 WealthWise. All rights reserved. | Designed for WealthWise.</p>
         </motion.div>
