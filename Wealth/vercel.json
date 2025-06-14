@@ -1,6 +1,5 @@
-# Vercel configuration for React Router SPA
-# This will redirect all routes to index.html so client-side routing works
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
