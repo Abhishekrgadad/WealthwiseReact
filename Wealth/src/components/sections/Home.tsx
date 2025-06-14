@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import Image from '../../assets/Image.png'; // Adjust the path as necessary
-import gif from '../../assets/gif.gif'; // Adjust the path as necessary
+import Image from '../../assets/Image.png'; 
 
 
 const Home = () => {
@@ -54,7 +53,7 @@ const Home = () => {
             >
               Schedule a Free Wealth Call
             </motion.button>
-            {/* Mobile Image below content */}
+            {/* Mobile Image below content
             <div className="block lg:hidden mt-8 w-full flex justify-center">
               <div className="relative w-64 h-64 flex items-center justify-center">
                 <img
@@ -64,7 +63,7 @@ const Home = () => {
                 />
                 <div className="absolute w-64 h-64 rounded-full border-2 border-white"></div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Image (desktop only) */}

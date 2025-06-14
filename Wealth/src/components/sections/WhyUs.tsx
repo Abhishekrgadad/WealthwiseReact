@@ -51,7 +51,7 @@ const WhyUs = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 sm:p-8 text-center group cursor-pointer rounded-lg transition-all duration-200 w-full max-w-xs mx-auto"
+              className="bg-white p-6 sm:p-8 text-center group cursor-pointer rounded-lg transition-all duration-200 w-full"
             >
               <div className="mb-4 sm:mb-6">
               <value.icon size={36} className="mx-auto text-black sm:size-[48px]" />
