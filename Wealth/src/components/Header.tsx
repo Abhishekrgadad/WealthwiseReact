@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,19 +15,29 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Why Us', href: '#why-us' },
-    { label: 'Services', href: '#services' },
-    { label: 'Team', href: '#team' },
-    { label: 'Journey', href: '#journey' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Why Us', href: '/#why-us' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Team', href: '/#team' },
+    { label: 'Journey', href: '/#journey' },
+    { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Contact', href: '/#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (href: string) => {
+    if (href === '/') {
+      navigate('/');
+    } else if (href.startsWith('/#')) {
+      navigate('/');
+      setTimeout(() => {
+        const id = href.replace('/#', '#');
+        const element = document.querySelector(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      navigate(href);
     }
   };
 
@@ -42,7 +54,7 @@ const Header = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="text-xl sm:text-2xl font-bold text-white cursor-pointer flex-shrink-0"
-            onClick={() => scrollToSection('#home')}
+            onClick={() => handleNavClick('#home')}
           >
             WealthWise
           </motion.div>
@@ -54,7 +66,7 @@ const Header = () => {
                 key={item.label}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 className="text-white hover:text-gray-300 transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
               >
                 {item.label}
@@ -66,7 +78,7 @@ const Header = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('#contact')}
+            onClick={() => window.location.href = '/schedule'}
             className="hidden lg:block bg-white text-black px-4 xl:px-6 py-2 xl:py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300 text-sm xl:text-base whitespace-nowrap flex-shrink-0"
           >
             Schedule a Free Call

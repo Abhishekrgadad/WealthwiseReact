@@ -1,4 +1,4 @@
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/sections/Home';
 import WhyUs from './components/sections/WhyUs';
@@ -9,23 +9,33 @@ import Testimonials from './components/sections/Testimonials';
 import Contact from './components/sections/Contact';
 import Blog from './components/sections/Blog';
 import Footer from './components/Footer';
+import ScheduleForm from './components/ScheduleForm';
 
 function App() {
   return (
-    <div className="bg-black font-poppins overflow-x-hidden">
-      <Header />
-      <main className='w-full'>
-        <Home />
-        <WhyUs />
-        <Services />
-        <Team />
-        <ClientJourney />
-        <Testimonials />
-        <Contact />
-        <Blog />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-black font-poppins overflow-x-hidden">
+        <Header />
+        <main className='w-full'>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Home />
+                <WhyUs />
+                <Services />
+                <Team />
+                <ClientJourney />
+                <Testimonials />
+                <Contact />
+                <Blog />
+              </>
+            } />
+            <Route path="/schedule" element={<ScheduleForm />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
