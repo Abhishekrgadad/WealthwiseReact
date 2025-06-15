@@ -33,7 +33,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl"
+          className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
         >
           We are not brokers. We are your long-term financial partners committed to building 
           sustainable wealth through smart, personalized investment strategies.
@@ -43,7 +43,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl list-disc pl-6 space-y-2"
+          className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl list-disc pl-6 space-y-2"
         >
           <li>
             Personalized strategies to budget, save, and invest wisely.
