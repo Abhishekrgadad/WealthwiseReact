@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import Image from '../../assets/Image.png'; 
-import { useNavigate } from 'react-router-dom';
+import Image from '../../assets/Image.png'; // Adjust the path as necessary
 
 
 const Home = () => {
-  const navigate = useNavigate();
   const scrollToNext = () => {
     const element = document.querySelector('#why-us');
     if (element) {
@@ -15,92 +13,81 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="bg-black flex items-start justify-center relative font-poppins pt-24 pb-16">
+    <section id="home" className="min-h-screen bg-black flex flex-col items-center justify-start relative font-poppins pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      {/* Left Content */}
-      <div className="text-left w-full flex flex-col items-start mt-0">
-      <motion.h1
-        initial={false}
-        animate="visible"
-        className="text-4xl sm:text-6xl md:text-7xl lg:text-5xl text-white leading-tight mb-4 sm:mb-6 text-left"
-      >
-        <motion.span
-        variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.1 } }
-        }}
-        initial="hidden"
-        animate="visible"
-        className="block text-left"
+        {/* Left Content */}
+        <div className="text-left">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6"
         >
-        Helping Ambitious <span className="font-semibold">Indians</span>
-        </motion.span>
-        <motion.span
-        variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.7 } }
-        }}
-        initial="hidden"
-        animate="visible"
-        className="block mt-2 text-left"
-        >
-        Grow Their <span className="font-semibold">Wealth</span>,
-        </motion.span>
-        <motion.span
-        variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 1.3 } }
-        }}
-        initial="hidden"
-        animate="visible"
-        className="block mt-2 text-left"
-        >
-        The <span className="font-semibold">Right</span> Way.
-        </motion.span>
-      </motion.h1>
+          Helping Ambitious <span className="font-semibold mt-4 block">Indians</span>{' '}
+          <span className=" mt-4 block">Grow Their <span className="font-semibold">Wealth</span>,</span>
+          <span className="mt-4 block">The <span className="font-semibold">Right</span> Way.</span>
+        </motion.h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2 }}
-        className="text-lg sm:text-xl lg:text-base text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-2xl text-left"
-      >
-        We are not brokers. We are your long-term financial partners committed to building 
-        sustainable wealth through smart, personalized investment strategies.
-      </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
+        >
+          We are not brokers. We are your long-term financial partners committed to building 
+          sustainable wealth through smart, personalized investment strategies.
+        </motion.p>
 
-      <motion.button
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2.2 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="bg-white text-black px-8 py-4 text-lg lg:text-base font-semibold hover:bg-gray-400 transition-colors duration-300 rounded-full"
-        onClick={() => navigate('/schedule')}
-      >
-        Schedule a Free Wealth Call
-      </motion.button>
+        <motion.button
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-400 transition-colors duration-300 rounded-full"
+          onClick={() => {
+          const element = document.querySelector('#contact');
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Schedule a Free Wealth Call
+        </motion.button>
+        </div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="hidden lg:flex justify-center items-center"
+        >
+          <div className="relative w-96 h-96 flex items-center justify-center">
+          <img
+          src={Image}
+          alt="Wealth Growth"
+          className="absolute w-90 h-90 rounded-full object-cover"
+          />
+          <div className="absolute w-[410px] h-[410px] rounded-full border-2 border-white"></div>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Right Image (desktop only) */}
+      </div>
+   
       <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 2.5 }}
-      className="hidden lg:flex justify-center items-center lg:order-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.8 }}
+      className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+      onClick={scrollToNext}
       >
-      <div className="relative w-96 h-96 flex items-center justify-center">
-        <img
-        src={Image}
-        alt="Wealth Growth"
-        className="absolute w-90 h-90 rounded-full object-cover"
-        />
-        <div className="absolute w-[410px] h-[410px] rounded-full border-2 border-white"></div>
-      </div>
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <ChevronDown size={32} className="text-white" />
       </motion.div>
-      </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
