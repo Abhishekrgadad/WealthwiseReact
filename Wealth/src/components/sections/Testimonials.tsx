@@ -69,62 +69,50 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 bg-black font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real feedback from real people who trusted us with their financial future.
-          </p>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        What Our Clients Say
+        </h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Real feedback from real people who trusted us with their financial future.
+        </p>
+      </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative h-96 overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.8 }}
-                className={`absolute inset-0 ${testimonials[currentIndex].background} p-12 flex items-center justify-center border rounded-lg border-gray-500`}
-              >
-                <div className="text-center">
-                  <Quote size={48} className={`mx-auto mb-8 ${testimonials[currentIndex].textColor}`} />
-                  <blockquote className={`text-2xl lg:text-3xl font-light ${testimonials[currentIndex].textColor} mb-8 leading-relaxed max-w-3xl`}>
-                    "{testimonials[currentIndex].quote}"
-                  </blockquote>
-                  <div className={`${testimonials[currentIndex].textColor}`}>
-                    <p className="text-xl font-semibold mb-1">
-                      {testimonials[currentIndex].author}
-                    </p>
-                    <p className="text-lg opacity-70">
-                      {testimonials[currentIndex].location}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Pagination Dots */}
-          {/* <div className="flex justify-center space-x-3 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-white' : 'bg-gray-600'
-                }`}
-              />
-            ))}
-          </div> */}
+      <div className="max-w-4xl mx-auto">
+        <div className="relative h-96 overflow-hidden">
+        <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.8 }}
+              className={`absolute inset-0 ${testimonials[currentIndex].background} bg-opacity-90 p-10 flex items-center justify-center border rounded-xl border-gray-400 shadow-2xl`}
+            >
+              <div className="flex flex-col items-center justify-center w-full h-full text-center">
+              <div className="flex flex-col items-center gap-2 mb-6">
+                <Quote size={40} className={`mx-auto ${testimonials[currentIndex].textColor} opacity-80`} />
+                <span className="block w-16 h-1 bg-white opacity-30 rounded-full"></span>
+              </div>
+              <blockquote className={`relative text-xl lg:text-2xl font-semibold italic ${testimonials[currentIndex].textColor} mb-6 leading-relaxed max-w-2xl mx-auto`}>
+                <span className="text-3xl text-white opacity-60 align-top mr-2">“</span>
+                {testimonials[currentIndex].quote}
+                <span className="text-3xl text-white opacity-60 align-bottom ml-2">”</span>
+              </blockquote>
+              <div className="flex flex-col items-center mt-2">
+                <p className={`text-base font-bold ${testimonials[currentIndex].textColor}`}>{testimonials[currentIndex].author}</p>
+                <p className={`text-xs opacity-70 ${testimonials[currentIndex].textColor}`}>{testimonials[currentIndex].location}</p>
+              </div>
+              </div>
+            </motion.div>
+        </AnimatePresence>
         </div>
+      </div>
       </div>
     </section>
   );
