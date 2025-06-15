@@ -91,7 +91,7 @@ const Testimonials = () => {
           </div>
 
           {/* Pagination Dots */}
-          <div className="flex justify-center space-x-3 mt-8">
+          {/* <div className="flex justify-center space-x-3 mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -101,7 +101,7 @@ const Testimonials = () => {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
