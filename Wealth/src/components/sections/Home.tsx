@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import Image from '../../assets/Image.png'; // Adjust the path as necessary
+import Image from '../../assets/Image.png';
 
 
 const Home = () => {
