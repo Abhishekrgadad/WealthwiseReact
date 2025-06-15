@@ -18,15 +18,28 @@ const Home = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
         <div className="text-left">
+        {/* Mobile/Tablet View */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
+          className="block lg:hidden text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
         >
           Helping Ambitious <span className="font-semibold mt-4 block">Indians</span>{' '}
-          <span className=" mt-4 block">Grow Their <span className="font-semibold">Wealth</span>,</span>
+          <span className="mt-4 block">Grow Their <span className="font-semibold">Wealth</span>,</span>
           <span className="mt-4 block">The <span className="font-semibold">Right</span> Way.</span>
+        </motion.h1>
+
+        {/* Desktop View */}
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="hidden lg:block text-5xl text-white leading-tight mb-8"
+        >
+          Helping Ambitious<br />
+          <span className="font-semibold">Indians</span>, Grow Their<br />
+          <span className="font-semibold">Wealth</span>, The <span className="font-semibold">Right</span> Way.
         </motion.h1>
 
         <motion.p
