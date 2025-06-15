@@ -54,16 +54,16 @@ const Header = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16">
         <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="text-xl sm:text-2xl font-bold text-white cursor-pointer flex-shrink-0 flex items-center "
-        onClick={() => handleNavClick('/')}
+          whileHover={{ scale: 1.05 }}
+          className="text-xl sm:text-2xl font-bold text-white cursor-pointer flex-shrink-0 flex items-center"
+          onClick={() => handleNavClick('/#home')}
         >
-        <img
-          src={Logo}
-          alt="Logo"
-          className="h-12 w-12 object-contain" // Increased from h-10 w-10 to h-12 w-12
-        />
-        Angel Investments
+          <img
+            src={Logo}
+            alt="Logo"
+            className="h-12 w-12 object-contain"
+          />
+          <span className="ml-2">Angel Investments</span>
         </motion.div>
 
         {/* Desktop Navigation - Only visible on lg and up */}

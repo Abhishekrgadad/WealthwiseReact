@@ -25,9 +25,8 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="block lg:hidden text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
         >
-          Helping Ambitious <span className="font-semibold mt-4 block">Indians</span>{' '}
-          <span className="mt-4 block">Grow Their <span className="font-semibold">Wealth</span>,</span>
-          <span className="mt-4 block">The <span className="font-semibold">Right</span> Way.</span>
+          Helping Ambitious <span className="mt-4 block"><span className="font-semibold">Indians</span> Grow Their</span>
+          <span className="mt-4 block"> <span className="font-semibold">Wealth</span> Right way.</span>
         </motion.h1>
 
         {/* Desktop View */}
@@ -35,7 +34,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="hidden lg:block text-5xl text-white leading-tight mb-8"
+          className="hidden lg:block text-5xl text-white leading-tight mb-12"
         >
           Helping Ambitious<br />
           <span className="font-semibold">Indians</span>, Grow Their<br />
@@ -48,8 +47,9 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
         >
-          We are not brokers. We are your long-term financial partners committed to building 
-          sustainable wealth through smart, personalized investment strategies.
+            Managing Over <span className="font-semibold">₹300 Crore</span> in Assets
+          <br />
+          Trusted by hundreds of families and business owners.we help grow wealth the right way, with personalized strategies and long-term clarity.
         </motion.p>
 
         <motion.p

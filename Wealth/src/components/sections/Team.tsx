@@ -1,39 +1,29 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Rajesh Kumar',
-      role: 'Founder & CEO',
-      experience: '15+ years',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+      name: "Rajesh Kumar",
+      role: "Founder & CEO",
+      experience: "15+ years",
+      image:
+        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
     },
     {
-      name: 'Priya Sharma',
-      role: 'Head of Investment',
-      experience: '12+ years',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+      name: "Priya Sharma",
+      role: "Head of Investment",
+      experience: "12+ years",
+      image:
+        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
     },
-    {
-      name: 'Amit Patel',
-      role: 'Senior Financial Advisor',
-      experience: '10+ years',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
-    },
-    {
-      name: 'Neha Singh',
-      role: 'Wealth Manager',
-      experience: '8+ years',
-      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
-    }
   ];
 
   const stats = [
-    { number: '300Cr+', label: 'AUM' },
-    { number: '1000+', label: 'HNI Clients' },
-    { number: '300+', label: 'Family Offices & UHNI' },
-    { number: '12yrs', label: 'Market Experience' }
+    { number: "300Cr+", label: "AUM" },
+    { number: "1000+", label: "HNI Clients" },
+    { number: "300+", label: "Family Offices & UHNI" },
+    { number: "12yrs", label: "Market Experience" },
   ];
 
   return (
@@ -58,16 +48,26 @@ const Team = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-3xl font-bold text-white">A Note from Our Founder</h3>
+            <h3 className="text-3xl font-bold text-white">
+              A Note from Our Founder
+            </h3>
             <div className="text-lg text-gray-300 leading-relaxed space-y-2 font-serif italic">
               <p>
-                "After working with hundreds of Indian families, I realized that most people don't need complex financial products—they need clarity, trust, and a long-term partner who truly understands their aspirations."
+                "After working with hundreds of Indian families, I realized that
+                most people don't need complex financial products—they need
+                clarity, trust, and a long-term partner who truly understands
+                their aspirations."
               </p>
               <p>
-                "That's why we built WealthWise. Not as another brokerage, but as a trusted financial partner committed to your success. Every recommendation we make is backed by thorough research and aligned with your unique goals."
+                "That's why we built Angel Investments. Not as another
+                brokerage, but as a trusted financial partner committed to your
+                success. Every recommendation we make is backed by thorough
+                research and aligned with your unique goals."
               </p>
               <div className="pt-4">
-                <p className="font-bold not-italic text-white">- Rajesh Kumar, Founder</p>
+                <p className="font-bold not-italic text-white">
+                  - Rajesh Kumar, Founder
+                </p>
               </div>
             </div>
           </motion.div>
@@ -77,7 +77,7 @@ const Team = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-2"
           >
             {teamMembers.map((member, index) => (
               <motion.div
@@ -98,19 +98,18 @@ const Team = () => {
                 <h3 className="text-lg font-bold text-white mb-2">
                   {member.name}
                 </h3>
-                <p className="text-gray-300 mb-1">{member.role}</p>
+                <p className="text-gray-300 mb-">{member.role}</p>
                 <p className="text-sm text-gray-400">{member.experience}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 bg-black p-8 rounded-lg"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8 bg-black  rounded-lg"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -120,7 +119,9 @@ const Team = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}

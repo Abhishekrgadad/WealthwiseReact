@@ -15,7 +15,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-2xl font-bold"
             >
-              WealthWise
+              Angel Investments
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -102,7 +102,7 @@ const Footer = () => {
                 className="flex items-center space-x-3"
               >
                 <Mail size={16} />
-                <span className="text-gray-300">hello@wealthwise.in</span>
+                <span className="text-gray-300">hello@Angel Investments.in</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -142,7 +142,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           className="pt-8 text-center text-gray-400 border-t border-black md:mt-12 md:border-t"
         >
-          <p>&copy; 2025 WealthWise. All rights reserved. | Designed for WealthWise.</p>
+          <p>&copy; 2025 Angel Investments. All rights reserved. | Designed for Angel Investments.</p>
         </motion.div>
       </div>
     </footer>

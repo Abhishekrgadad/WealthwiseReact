@@ -85,7 +85,7 @@ const Contact = () => {
 								</div>
 								<div>
 									<p className="font-semibold text-white">Phone</p>
-									<p className="text-gray-300">+91 98765 43210</p>
+									<p className="text-gray-300">+91 90352 54332</p>
 								</div>
 							</div>
 
@@ -95,7 +95,7 @@ const Contact = () => {
 								</div>
 								<div>
 									<p className="font-semibold text-white">Email</p>
-									<p className="text-gray-300">hello@wealthwise.in</p>
+									<p className="text-gray-300">hello@Angel Investments.in</p>
 								</div>
 							</div>
 
@@ -106,9 +106,9 @@ const Contact = () => {
 								<div>
 									<p className="font-semibold text-white">Office</p>
 									<p className="text-gray-300">
-										Business Bay, Lower Parel
+										H 2nd floor, No 19, 1st Main Rd, <br></br>opposite total gas, 3rd Block, <br></br>3rd Stage,Basaveshwar Nagar
 										<br />
-										Mumbai, Maharashtra 400013
+										Bengaluru, Karnataka 560079
 									</p>
 								</div>
 							</div>
