@@ -17,12 +17,12 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
-        <div className="text-left">
+        <div className="text-left mt-10">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8"
         >
           Helping Ambitious <span className="font-semibold mt-4 block">Indians</span>{' '}
           <span className=" mt-4 block">Grow Their <span className="font-semibold">Wealth</span>,</span>
@@ -33,11 +33,25 @@ const Home = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
+          className="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl"
         >
           We are not brokers. We are your long-term financial partners committed to building 
           sustainable wealth through smart, personalized investment strategies.
         </motion.p>
+
+        <motion.ul
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl list-disc pl-6 space-y-2"
+        >
+          <li>
+            Personalized strategies to budget, save, and invest wisely.
+          </li>
+          <li>
+            Guidance on building healthy financial habits.
+          </li>
+        </motion.ul>
 
         <motion.button
           initial={{ opacity: 0, y: 30 }}
