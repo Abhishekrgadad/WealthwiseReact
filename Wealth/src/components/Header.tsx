@@ -56,7 +56,7 @@ const Header = () => {
             className="text-xl sm:text-2xl font-bold text-white cursor-pointer flex-shrink-0"
             onClick={() => handleNavClick('#home')}
           >
-            WealthWise
+            Angel Investments
           </motion.div>
 
           {/* Desktop Navigation - Only visible on lg and up */}

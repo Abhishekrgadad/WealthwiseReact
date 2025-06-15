@@ -39,20 +39,15 @@ const Home = () => {
           sustainable wealth through smart, personalized investment strategies.
         </motion.p>
 
-        <motion.ul
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl list-disc pl-6 space-y-2"
+          className="text-lg sm:text-xl text-white mb-8 leading-relaxed max-w-2xl"
         >
-          <li>
-            Personalized strategies to budget, save, and invest wisely.
-          </li>
-          <li>
-            Guidance on building healthy financial habits.
-          </li>
-        </motion.ul>
-
+          What you do with <span className="font-semibold">₹1 lakh</span> today decides your <span className="font-semibold">₹1 crore</span> tomorrow.
+        </motion.p>
+        
         <motion.button
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
