@@ -93,7 +93,7 @@ const Footer = () => {
                 className="flex items-center space-x-3"
               >
                 <Phone size={16} />
-                <span className="text-gray-300">+91 98765 43210</span>
+                <span className="text-gray-300">+91 90352 54332</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -111,7 +111,7 @@ const Footer = () => {
                 className="flex items-start space-x-3"
               >
                 <MapPin size={16} className="mt-0.5" />
-                <span className="text-gray-300">Mumbai, Maharashtra, India</span>
+                <span className="text-gray-300">Basaveshwar Nagar Bengaluru, Karnataka - 560079</span>
               </motion.div>
             </div>
             
@@ -142,7 +142,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           className="pt-8 text-center text-gray-400 border-t border-black md:mt-12 md:border-t"
         >
-          <p>&copy; 2025 Angel Investments. All rights reserved. | Designed for Angel Investments.</p>
+          <p>&copy; 2025 Angel Investments. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
