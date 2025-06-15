@@ -5,33 +5,55 @@ import { Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "WealthWise helped me structure my investments properly. In 3 years, my portfolio has grown by 18% annually while reducing risk. They truly understand Indian markets.",
-      author: "S.K.",
-      location: "Mumbai",
+      quote: "I always thought wealth management was for the rich. But Angel Investments helped me turn my small profits into a long term plan. I feel confident for my family’s future now.",
+      author: "Ravi Kumar",
+      location: "Mysore",
       background: "bg-black",
       textColor: "text-white"
     },
     {
-      quote: "Finally found advisors who don't push products. They spent 2 hours understanding my goals before recommending anything. My retirement planning is now on track.",
-      author: "P.M.",
+      quote: "We were investing randomly stocks here, a policy there. The team at Angel Investments helped us clean up our portfolio and set real goals. Now we feel in control.",
+      author: "Shruti & Aditya Deshmukh",
+      location: "Pune",
+      background: "bg-black",
+      textColor: "text-white"
+    },
+    {
+      quote: "They didn’t sell me anything. They listened. They understood I wanted peace of mind, not risk. Today, my retirement income is steady and worry-free.",
+      author: "Mahadevan Iyer",
+      location: "Chennai",
+      background: "bg-black",
+      textColor: "text-white"
+    },
+    {
+      quote: "I used to follow tips on YouTube and Instagram made money, lost more. Angel taught me discipline, SIPs, and planning. I just wish I had started earlier.",
+      author: "Nikhil V",
       location: "Bangalore",
       background: "bg-black",
       textColor: "text-white"
     },
     {
-      quote: "Best decision was switching to WealthWise. They optimized my tax planning and insurance, saving me ₹2 lakhs annually. Professional and trustworthy team.",
-      author: "R.G.",
-      location: "Delhi",
+      quote: "I was looking to move my savings back to India and didn’t know where to start. Their team made the process easy clear advice, zero confusion.",
+      author: "Sana Rahman",
+      location: "Dubai to Bangalore",
       background: "bg-black",
       textColor: "text-white"
     },
     {
-      quote: "As a young professional, I was confused about investments. WealthWise created a simple SIP strategy that's already showing great results. Highly recommend!",
-      author: "A.S.",
-      location: "Pune",
+      quote: "I used to blindly invest in crypto and stocks from tips. Lost money. After following their Kannada finance videos, I understood SIP properly. My money is growing without stress now.",
+      author: "Rohith B",
+      location: "Hubli",
       background: "bg-black",
       textColor: "text-white"
-    }
+    },
+    {
+      quote: "Big banks just sell products. Angel’s team explained everything patiently in Kannada. They never pushed anything. Genuine guidance and proper service.",
+      author: "Nagaraj Patil",
+      location: "Belgavi",
+      background: "bg-black",
+      textColor: "text-white"
+    },
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
