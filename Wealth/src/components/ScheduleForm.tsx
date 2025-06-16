@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
+
+export const WhatsappFloating = () => (
+  <a
+    href="https://wa.me/919035254332"
+    target="Whatsapp"
+    rel="noopener noreferrer"
+    className="fixed z-50 bottom-6 right-6 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors duration-200"
+    aria-label="Chat on WhatsApp"
+    style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.25)' }}
+  >
+    <FaWhatsapp size={32} />
+  </a>
+);
 
 const ScheduleForm = () => {
   const [formData, setFormData] = useState({

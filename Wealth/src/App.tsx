@@ -10,6 +10,7 @@ import Contact from './components/sections/Contact';
 import Blog from './components/sections/Blog';
 import Footer from './components/Footer';
 import ScheduleForm from './components/ScheduleForm';
+import { WhatsappFloating } from './components/ScheduleForm';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsappFloating />
       </div>
     </BrowserRouter>
   );
