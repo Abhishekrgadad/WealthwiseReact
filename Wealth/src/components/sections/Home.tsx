@@ -68,10 +68,7 @@ const Home = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-400 transition-colors duration-300 rounded-full"
-          onClick={() => {
-          const element = document.querySelector('#contact');
-          if (element) element.scrollIntoView({ behavior: 'smooth' });
-          }}
+          onClick={() => window.location.href = '/schedule'}
         >
           Schedule a Free Wealth Call
         </motion.button>
