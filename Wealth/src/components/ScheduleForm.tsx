@@ -78,14 +78,14 @@ const ScheduleForm = () => {
     const payload = {
       fields: {
         name: formData.name,
-        phone: "91" + formData.phone, // prefix country code (if needed)
-        course: formData.investmentGoal,
-        investment: formData.invest,
+        phone: "91" + formData.phone, 
+        // course: formData.investmentGoal,
+        amount: formData.invest,
       },
       actions: [
         {
           type: "SYSTEM_NOTE",
-          text: `Lead Source: Website ${window.location.href}`,
+          text: `Lead Source: Website:angelinvestment.co.in`,
         },
         {
           type: "SYSTEM_NOTE",
