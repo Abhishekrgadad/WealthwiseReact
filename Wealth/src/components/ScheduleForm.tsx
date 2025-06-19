@@ -76,23 +76,25 @@ const ScheduleForm = () => {
 
     // Prepare data for TeleCRM API
     const payload = {
-      fields: {
-        name: formData.name,
-        phone: "91" + formData.phone, 
-        // course: formData.investmentGoal,
-        amount: formData.invest,
-      },
-      actions: [
-        {
-          type: "SYSTEM_NOTE",
-          text: `Lead Source: Website:angelinvestment.co.in`,
-        },
-        {
-          type: "SYSTEM_NOTE",
-          text: `Investment Goal: ${formData.investmentGoal}, Amount: ${formData.invest}`,
-        },
-      ],
-    };
+  fields: {
+    name: formData.name, 
+    phone: "91" + formData.phone, 
+    email: `weblead+${formData.phone}@yourdomain.com`,
+    amount: formData.invest,
+    source: "Website - Schedule Form",
+  },
+  actions: [
+    {
+      type: "SYSTEM_NOTE",
+      text: `Lead Source: ${window.location.href}`,
+    },
+    {
+      type: "SYSTEM_NOTE",
+      text: `Goal: ${formData.investmentGoal}, Amount: ₹${formData.invest}`,
+    },
+  ],
+};
+
 
     try {
       await axios.post(TELECRM_API_URL, payload, {
