@@ -4,6 +4,8 @@ import axios from 'axios';
 const TELECRM_AUTH_TOKEN = process.env.VITE_AUTH_TOKEN!;
 const TELECRM_ENTERPRISE_ID = process.env.VITE_ENTERPRISE_ID!;
 const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
+console.log("TELECRM_API_URL:", TELECRM_API_URL);
+console.log("TELECRM_AUTH_TOKEN:", TELECRM_AUTH_TOKEN);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
