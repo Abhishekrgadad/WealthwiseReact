@@ -33,10 +33,11 @@ const ScheduleForm = () => {
     invest: "",
   });
 
-  const TELECRM_AUTH_TOKEN = import.meta.env.VITE_TELECRM_AUTH_TOKEN;
-  const TELECRM_ENTERPRISE_ID = import.meta.env.VITE_TELECRM_ENTERPRISE_ID;
+  const TELECRM_AUTH_TOKEN = import.meta.env.AUTH_TOKEN;
+  const TELECRM_ENTERPRISE_ID = import.meta.env.ENTERPRISE_ID;
   const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
-
+  console.log("Telecrm enterprise ID:", TELECRM_ENTERPRISE_ID);
+  console.log("Telecrm token:", TELECRM_AUTH_TOKEN);
 
   const validate = () => {
     let valid = true;
