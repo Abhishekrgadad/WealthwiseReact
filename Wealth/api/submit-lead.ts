@@ -1,8 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import axios from 'axios';
 
-const TELECRM_AUTH_TOKEN = process.env.AUTH_TOKEN!;
-const TELECRM_ENTERPRISE_ID = process.env.ENTERPRISE_ID!;
+const TELECRM_AUTH_TOKEN = process.env.VITE_AUTH_TOKEN!;
+const TELECRM_ENTERPRISE_ID = process.env.VITE_ENTERPRISE_ID!;
 const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
