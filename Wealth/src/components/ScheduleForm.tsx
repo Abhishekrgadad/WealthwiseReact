@@ -33,11 +33,9 @@ const ScheduleForm = () => {
     invest: "",
   });
 
-  // const TELECRM_AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
-  // const TELECRM_ENTERPRISE_ID = import.meta.env.VITE_ENTERPRISE_ID;
-  // const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
-  // console.log("TELECRM_API_URL:", TELECRM_ENTERPRISE_ID);
-  // console.log("TELECRM_AUTH_TOKEN:", TELECRM_AUTH_TOKEN);
+  const TELECRM_AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
+  const TELECRM_ENTERPRISE_ID = import.meta.env.VITE_ENTERPRISE_ID;
+  const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
 
   const validate = () => {
     let valid = true;
@@ -83,7 +81,7 @@ const ScheduleForm = () => {
         phone: "91" + formData.phone,
         investment_goal: formData.investmentGoal,
         amount: formData.invest,
-        source: "Website - Schedule Form",
+        source: formData.investmentGoal,
       },
       actions: [
         {
@@ -97,58 +95,35 @@ const ScheduleForm = () => {
       ],
     };
 
-    //   try {
-    //     await axios.post(TELECRM_API_URL, payload, {
-    //       headers: {
-    //         Authorization: `Bearer ${TELECRM_AUTH_TOKEN}`,
-    //         "Content-Type": "application/json",
-    //       },
-    //     });
-    //     setIsSubmitted(true);
-    //     setFormData({ name: "", phone: "", investmentGoal: "", invest: "" });
-    //     setErrors({ name: "", phone: "", investmentGoal: "", invest: "" });
-    //     setTimeout(() => setIsSubmitted(false), 3000);
-    //   } catch (error: unknown) {
-    //     if (axios.isAxiosError(error)) {
-    //       console.error("TeleCRM Submission Error:", error.response?.data || error);
-    //     } else {
-    //       console.error("TeleCRM Submission Error:", error);
-    //     }
-    //     alert("There was a problem submitting your details. Please try again later.");
-    //   }
-    // };
+      try {
+        await axios.post(TELECRM_API_URL, payload, {
+          headers: {
+            Authorization: `Bearer ${TELECRM_AUTH_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+        });
+        setIsSubmitted(true);
+        setFormData({ name: "", phone: "", investmentGoal: "", invest: "" });
+        setErrors({ name: "", phone: "", investmentGoal: "", invest: "" });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          console.error("TeleCRM Submission Error:", error.response?.data || error);
+        } else {
+          console.error("TeleCRM Submission Error:", error);
+        }
+        alert("There was a problem submitting your details. Please try again later.");
+      }
+    };
 
-    // const handleChange = (
-    //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-    // ) => {
-    //   setFormData({
-    //     ...formData,
-    //     [e.target.name]: e.target.value,
-    //   });
-    // };
-
-    try {
-      await axios.post("/api/submit-lead", payload);
-      setIsSubmitted(true);
-      setFormData({ name: "", phone: "", investmentGoal: "", invest: "" });
-      setErrors({ name: "", phone: "", investmentGoal: "", invest: "" });
-      setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
-      console.error("Submit Error:", error);
-      alert(
-        "There was a problem submitting your details. Please try again later."
-      );
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    const handleChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    };
 
   return (
     <section className="py-20 bg-black font-poppins min-h-screen flex items-center justify-center">
