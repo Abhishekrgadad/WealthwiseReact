@@ -1,21 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+ import AbhiImg from "../../assets/Image.png";
+import GiriImg from "../../assets/Giri.png";
 
 const Team = () => {
+ 
+
   const teamMembers = [
     {
-      name: "Rajesh Kumar",
+      name: "Abhilash N",
       role: "Founder & CEO",
-      experience: "15+ years",
-      image:
-        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      experience: "12+ years",
+      image: AbhiImg,
     },
     {
-      name: "Priya Sharma",
-      role: "Head of Investment",
-      experience: "12+ years",
-      image:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      name: "Girish Kumar N",
+      role: "Sales Head",
+      experience: "7+ years",
+      image: GiriImg,
     },
   ];
 
@@ -66,7 +68,7 @@ const Team = () => {
               </p>
               <div className="pt-4">
                 <p className="font-bold not-italic text-white">
-                  - Rajesh Kumar, Founder
+                  - Abhilash N, Founder
                 </p>
               </div>
             </div>
@@ -92,7 +94,7 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-24 h-24 rounded-full mx-auto  group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">

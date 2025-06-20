@@ -102,7 +102,7 @@ const Footer = () => {
                 className="flex items-center space-x-3"
               >
                 <Mail size={16} />
-                <span className="text-gray-300">hello@Angel Investments.in</span>
+                <span className="text-gray-300">care@angelinvestments.co.in</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
