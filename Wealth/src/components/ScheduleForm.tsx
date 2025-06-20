@@ -33,8 +33,8 @@ const ScheduleForm = () => {
     invest: "",
   });
 
-  const TELECRM_ENTERPRISE_ID = "enterprise-id";
-  const TELECRM_AUTH_TOKEN = "bearer-token";
+  const TELECRM_ENTERPRISE_ID = "ENTERPRISE";
+  const TELECRM_AUTH_TOKEN = "TOKEN";
   const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
 
   const validate = () => {
@@ -79,7 +79,7 @@ const ScheduleForm = () => {
   fields: {
     name: formData.name, 
     phone: "91" + formData.phone, 
-    email: `weblead+${formData.phone}@yourdomain.com`,
+    investment_goal: formData.investmentGoal,
     amount: formData.invest,
     source: "Website - Schedule Form",
   },
