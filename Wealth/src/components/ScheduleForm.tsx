@@ -33,6 +33,13 @@ const ScheduleForm = () => {
     invest: "",
   });
 
+  const TELECRM_AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN;
+  const TELECRM_ENTERPRISE_ID = import.meta.env.VITE_ENTERPRISE_ID;
+  const TELECRM_API_URL = `https://api.telecrm.in/enterprise/${TELECRM_ENTERPRISE_ID}/autoupdatelead`;
+  console.log("TELECRM_API_URL:", TELECRM_ENTERPRISE_ID);
+  console.log("TELECRM_AUTH_TOKEN:", TELECRM_AUTH_TOKEN);
+  
+
   const validate = () => {
     let valid = true;
     const newErrors = { name: "", phone: "", investmentGoal: "", invest: "" };
@@ -70,34 +77,45 @@ const ScheduleForm = () => {
     e.preventDefault();
     if (!validate()) return;
 
+    // Prepare data for TeleCRM API
     const payload = {
-      fields: {
-        name: formData.name,
-        phone: "91" + formData.phone,
-        investment_goal: formData.investmentGoal,
-        amount: formData.invest,
-        source: "Website - Schedule Form",
-      },
-      actions: [
-        {
-          type: "SYSTEM_NOTE",
-          text: `Lead Source: ${window.location.href}`,
-        },
-        {
-          type: "SYSTEM_NOTE",
-          text: `Goal: ${formData.investmentGoal}, Amount: ₹${formData.invest}`,
-        },
-      ],
-    };
+  fields: {
+    name: formData.name, 
+    phone: "91" + formData.phone, 
+    investment_goal: formData.investmentGoal,
+    amount: formData.invest,
+    source: "Website - Schedule Form",
+  },
+  actions: [
+    {
+      type: "SYSTEM_NOTE",
+      text: `Lead Source: ${window.location.href}`,
+    },
+    {
+      type: "SYSTEM_NOTE",
+      text: `Goal: ${formData.investmentGoal}, Amount: ₹${formData.invest}`,
+    },
+  ],
+};
+
 
     try {
-      await axios.post("/api/submit-lead", payload);
+      await axios.post(TELECRM_API_URL, payload, {
+        headers: {
+          Authorization: `Bearer ${TELECRM_AUTH_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      });
       setIsSubmitted(true);
       setFormData({ name: "", phone: "", investmentGoal: "", invest: "" });
       setErrors({ name: "", phone: "", investmentGoal: "", invest: "" });
       setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
-      console.error("Submit Error:", error);
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        console.error("TeleCRM Submission Error:", error.response?.data || error);
+      } else {
+        console.error("TeleCRM Submission Error:", error);
+      }
       alert("There was a problem submitting your details. Please try again later.");
     }
   };
@@ -114,6 +132,7 @@ const ScheduleForm = () => {
   return (
     <section className="py-20 bg-black font-poppins min-h-screen flex items-center justify-center">
       <div className="max-w-4xl w-full mx-auto bg-gray-900 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2">
+        {/* Left Side: Info Text */}
         <div className="flex flex-col justify-center p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-800">
           <h2 className="text-3xl font-bold text-white mb-4">
             Your ₹1 Crore Journey Starts With This <br /> One Step
@@ -130,11 +149,13 @@ const ScheduleForm = () => {
           </ul>
         </div>
 
+        {/* Right Side: Form */}
         <div className="p-8 md:p-12">
           <h3 className="text-2xl font-bold text-white mb-6">
             Schedule Your Free Consultation
           </h3>
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name */}
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 Full Name *
@@ -151,6 +172,7 @@ const ScheduleForm = () => {
               )}
             </div>
 
+            {/* Phone */}
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 Phone Number *
@@ -169,6 +191,7 @@ const ScheduleForm = () => {
               )}
             </div>
 
+            {/* Investment Goal */}
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 Investment Goal *
@@ -194,6 +217,7 @@ const ScheduleForm = () => {
               )}
             </div>
 
+            {/* Investment Amount */}
             <div>
               <label className="block text-sm font-medium text-white mb-2">
                 Investment Amount (₹) *
@@ -212,6 +236,7 @@ const ScheduleForm = () => {
               )}
             </div>
 
+            {/* Submit Button */}
             <motion.button
               type="submit"
               whileHover={{ scale: 1.02 }}
@@ -223,6 +248,7 @@ const ScheduleForm = () => {
             </motion.button>
           </form>
 
+          {/* Success Message */}
           <AnimatePresence>
             {isSubmitted && (
               <motion.div
