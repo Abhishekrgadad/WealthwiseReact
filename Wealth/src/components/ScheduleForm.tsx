@@ -199,12 +199,12 @@ const ScheduleForm = () => {
                 className="w-full px-4 py-3 border-2 border-gray-600 bg-black text-white focus:border-white focus:outline-none"
               >
                 <option value="">Select your goal</option>
-                <option value="wealth-creation">Grow my Money</option>
-                <option value="financial-freedom">SIP</option>
-                <option value="retirement">Retirement Planning</option>
-                <option value="child-education">Child's Education</option>
-                <option value="home-purchase">Home Purchase</option>
-                <option value="tax-saving">Tax Saving</option>
+                <option value="grow">Grow my Money</option>
+                <option value="SIP">SIP</option>
+                <option value="ins">Insurance</option>
+                <option value="mutualfund">Mutual Fund</option>
+                {/* <option value="home-purchase">Home Purchase</option>
+                <option value="tax-saving">Tax Saving</option> */}
                 <option value="other">Other</option>
               </select>
               {errors.investmentGoal && (
