@@ -6,7 +6,7 @@ import Image from '../../assets/Image.png';
 
 const Home = () => {
   const scrollToNext = () => {
-    const element = document.querySelector('#why-us');
+    const element = document.querySelector('#home');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }

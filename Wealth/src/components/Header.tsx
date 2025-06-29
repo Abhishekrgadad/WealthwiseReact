@@ -17,18 +17,20 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '/' },
+    { label: 'Home', href: '/#home' },
     { label: 'Why Us', href: '/#why-us' },
     { label: 'Services', href: '/#services' },
     { label: 'Team', href: '/#team' },
     { label: 'Journey', href: '/#journey' },
-    { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Blog', href: '/#blogsection' },
     { label: 'Contact', href: '/#contact' },
   ];
 
   const handleNavClick = (href: string) => {
     if (href === '/') {
       navigate('/');
+    } else if (href === '/blog') {
+      navigate('/blog');
     } else if (href.startsWith('/#')) {
       navigate('/');
       setTimeout(() => {

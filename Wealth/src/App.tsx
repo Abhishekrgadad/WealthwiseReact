@@ -7,10 +7,11 @@ import Team from './components/sections/Team';
 import ClientJourney from './components/sections/ClientJourney';
 import Testimonials from './components/sections/Testimonials';
 import Contact from './components/sections/Contact';
-import Blog from './components/sections/Blog';
+import Blog from './components/sections/insight';
 import Footer from './components/Footer';
-import ScheduleForm from './components/ScheduleForm';
-import { WhatsappFloating } from './components/ScheduleForm';
+import ScheduleForm from './components/pages/ScheduleForm';
+import BlogPage from './components/pages/BlogPage';
+import { WhatsappFloating } from './components/pages/ScheduleForm';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               </>
             } />
             <Route path="/schedule" element={<ScheduleForm />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </main>
         <Footer />
